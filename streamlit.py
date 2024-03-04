@@ -8,7 +8,9 @@ os.environ['DISPLAY'] = ':0'
 
 try:
     uploaded_file = st.file_uploader("Choose an Excel file", type="xlsx")
-    df = pd.read_excel(uploaded_file, sheet_name='2\'MAR24')
+    if uploaded_file is not None:
+        bytes_data = uploaded_file.getvalue()
+        df = pd.read_excel(io.BytesIO(bytes_data), sheet_name='2\'MAR24')
 except:
     st.write("Please upload the excel file")
 else:
