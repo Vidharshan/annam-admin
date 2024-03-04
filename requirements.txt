@@ -170,7 +170,5 @@ wikipedia==1.4.0
 wrapt==1.14.1
 wsproto==1.2.0
 xxhash==3.4.1
-y-py @ file:///C:/b/abs_b7f5go6r0j/croot/y-py_1683662173571/work
 yarl==1.9.2
-ypy-websocket @ file:///C:/b/abs_4e65ywlnv8/croot/ypy-websocket_1684172103529/work
 zipp==3.17.0
