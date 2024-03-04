@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import pywhatkit as kit
+# import pywhatkit as kit
 import datetime
 import time
 import os
@@ -87,8 +87,8 @@ if (st.button('Send bill')):
         try:
             if msg:
                 c += 1
-                kit.sendwhatmsg_instantly(phone, msg)
-                time.sleep(7)
+                # kit.sendwhatmsg_instantly(phone, msg)
+                # time.sleep(7)
         except Exception as e:
             print(f"Error: Message not sent to {phone}. Error details: {str(e)}")
         print("-----------------")
