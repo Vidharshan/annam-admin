@@ -8,7 +8,7 @@ os.environ['DISPLAY'] = ':0'
 
 try:
     uploaded_file = st.file_uploader("Choose an Excel file", type="xlsx")
-    df = pd.read_excel('Jan 2024.xlsx', sheet_name='2\'MAR24')
+    df = pd.read_excel(uploaded_file, sheet_name='2\'MAR24')
 except:
     st.write("Please upload the excel file")
 else:
