@@ -3,6 +3,8 @@ import streamlit as st
 import pywhatkit as kit
 import datetime
 import time
+import os
+os.environ['DISPLAY'] = ':0'
 
 try:
     uploaded_file = st.file_uploader("Choose an Excel file", type="xlsx")
