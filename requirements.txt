@@ -1,2 +1,2 @@
-
+openpyxl
 pywhatkit==5.4
