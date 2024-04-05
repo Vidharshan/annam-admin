@@ -31,14 +31,14 @@ try:
                 tot=0
                 msg=''
                 phone=''
-                area=row['E']
-                if not pd.isna(row['C']):
-                    phone='+91 '+str(int(row['C']))
-                if(type(row['C'])==float and phone !=''):
-                    st.markdown(f"## {row['D']}  {area}")
+                area=row['F']
+                if not pd.isna(row['D']):
+                    phone='+91 '+str(int(row['D']))
+                if(type(row['D'])==float and phone !=''):
+                    st.markdown(f"## {row['E']}  {area}")
                     for column, value in row.items():
-                        vegetable=df.at[2,column]
-                        price=df.at[1,column]
+                        vegetable=df.at[5,column]
+                        price=df.at[4,column]
                         if not pd.isna(value) and not pd.isna(price) and not pd.isna(vegetable):
                             tot+=float(value)*float(price)
                             st.markdown(f"##### {vegetable} ----- {value} ")
@@ -58,18 +58,18 @@ try:
                 msg=''
                 phone=''
             #     print(row['H'],row['E'])
-                if not pd.isna(row['C']):
-                    phone='+91 '+str(int(row['C']))
+                if not pd.isna(row['D']):
+                    phone='+91 '+str(int(row['D']))
                     print(phone)
-                if(type(row['C'])==float and phone !=''):
-                    msg+=f"ANNAM FARMS\t{datetime.date.today()}\nHi {row['D']},\nYour bill details are:\n"
+                if(type(row['D'])==float and phone !=''):
+                    msg+=f"ANNAM FARMS\t{datetime.date.today()}\nHi {row['E']},\nYour bill details are:\n"
                     for column, value in row.items():
-                        vegetable=df.at[2,column]
-                        price=df.at[1,column]
+                        vegetable=df.at[5,column]
+                        price=df.at[4,column]
                         if not pd.isna(value) and not pd.isna(price) and not pd.isna(vegetable):
                             msg+=f"\n{vegetable}= {value} *{price}={round(float(value)*float(price))}"
                             tot+=float(value)*float(price)
-                    delivery=df.columns[df.iloc[2].eq('Delivery')][0]
+                    delivery=df.columns[df.iloc[5].eq('Delivery')][0]
             #         comments=df.columns[df.iloc[5].eq('Comments')][0]
                     tot+=df.at[index, delivery]
             #         msg+=f"\nDelivery={df.at[index, delivery]}\n{df.at[index, comments]}\nTotal={tot}"
